@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тихая гавань — Кемпинг в Карелии</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-top-wrapper">
+      <button id="lang-btn" class="lang-btn" data-en="Eng">Eng</button>
+      <h1 data-en="Silent Harbor">Тихая гавань</h1>
+      <img src="gull.png" alt="Чайка" class="hero-img-gull">
+    </div>
+
+    <div class="hero-meta">
+      <span data-en="Camping in Karelia">Кемпинг в Карелии</span>
+      <span data-en="Genre: nature, recreation">Тема: природа, отдых</span>
+      <span data-en="Running time: all summer">Длина отдыха: по вашему желанию</span>
+    </div>
+
+    <div class="hero-photo-wrapper">
+      <img src="karelia.jpg" alt="Скалы Карелии" class="hero-img-karelia">
+      <div class="hero-bottom-quote">
+        <p data-en="Meet the dawns<br>away from the city bustle.">Встречайте рассветы<br>вдали от городской суеты.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="booking-map">
+    <section class="filters-wrapper" aria-label="Фильтры">
+      <div class="filters">
+        <div class="filter-group">
+          <label for="filter-guests" data-en="Guests">Гостей</label>
+          <select id="filter-guests">
+            <option value="0" data-en="Any amount">Любое количество</option>
+            <option value="2" data-en="From 2 people">От 2 человек</option>
+            <option value="4" data-en="From 4 people">От 4 человек</option>
+            <option value="6" data-en="From 6 people">От 6 человек</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-price" data-en="Max price per night">Макс. цена за ночь</label>
+          <input type="number" id="filter-price" placeholder="Например, 3000" data-en-placeholder="For example, 3000" min="0" step="100">
+        </div>
+        
+        <div class="filter-group">
+          <label for="sort-price" data-en="Sort by price">Сортировка</label>
+          <select id="sort-price">
+            <option value="default" data-en="Default">По умолчанию</option>
+            <option value="asc" data-en="Cheap first">Сначала дешевые</option>
+            <option value="desc" data-en="Expensive first">Сначала дорогие</option>
+          </select>
+        </div>
+
+        <button type="button" id="reset-filters" class="btn-outline" data-en="Reset">Сбросить</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="map-section" aria-labelledby="map-title">
+        <h2 id="map-title" class="section-title" data-en="Campsite map">Карта стоянок</h2>
+        <p class="section-desc" data-en="Click on a marker to find out details.">Нажмите на маркер, чтобы узнать детали.</p>
+        
+        <div class="scheme-wrapper">
+          <div id="scheme" class="scheme"></div>
+        </div>
+        
+        <div class="legend">
+          <span><span class="legend-dot free"></span> <span data-en="Free">Свободен</span></span>
+          <span><span class="legend-dot selected"></span> <span data-en="Selected">Выбран</span></span>
+          <span><span class="legend-dot occupied"></span> <span data-en="Occupied">Занят</span></span>
+        </div>
+
+        <div class="map-paper-layer">
+          <img src="paper.png" alt="Бумага" class="paper-bg">
+          <div class="paper-text">
+            <p class="paper-para" data-en="<strong>About the place</strong><br>Tired of the city bustle, you go to the shore of Lake Ladoga, where pines touch the sky, and granite rocks keep silence. Choose your camping spot and book it."><strong>О месте</strong><br>Устав от городской суеты, вы отправляетесь на берег Ладожского озера, где сосны касаются неба, а гранитные скалы хранят тишину. Выберите своё место для палатки и забронируйте его.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div id="card-container" class="card-container">
+          <!-- Тут будет карточка -->
+        </div>
+        
+        <section class="list-section" aria-labelledby="list-title">
+          <h2 id="list-title" class="section-title" data-en="All campsites">Все стоянки</h2>
+          <div id="list" class="list"></div>
+        </section>
+      </section>
+    </div>
+
+    <section class="bookings-section" aria-labelledby="bookings-title">
+      <div class="bookings-header">
+        <h2 id="bookings-title" class="section-title" data-en="My bookings">Мои брони</h2>
+        <button type="button" id="clear-bookings" class="btn-danger" hidden data-en="Reset all">Сбросить все</button>
+      </div>
+      <div id="bookings-list" class="bookings-list"></div>
+      <p class="storage-message" id="storage-message" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-en="Educational demo: bookings are saved only in this browser. No real booking is made.">Учебное демо: бронирования сохраняются только в этом браузере. Реальная бронь не оформляется.</p>
+  </footer>
+</body>
+</html>

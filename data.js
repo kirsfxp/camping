@@ -1,0 +1,10 @@
+export const campsites = [
+  { id: 'tent-1', name: 'Шатёр у озера', name_en: 'Lakeside Tent', desc: 'Идеально для пары. Вид на закат и тихую воду.', desc_en: 'Perfect for a couple. View of the sunset and quiet water.', capacity: 2, price: 1500, x: 20, y: 30, initiallyOccupied: false },
+  { id: 'tent-2', name: 'Лесная палатка', name_en: 'Forest Tent', desc: 'В окружении сосен. Уютно и тихо.', desc_en: 'Surrounded by pine trees. Cozy and quiet.', capacity: 4, price: 2000, x: 50, y: 20, initiallyOccupied: true },
+  { id: 'tent-3', name: 'Семейный шатёр', name_en: 'Family Tent', desc: 'Большое место для всей семьи. Рядом ручей.', desc_en: 'Large place for the whole family. Next to the stream.', capacity: 6, price: 3500, x: 80, y: 35, initiallyOccupied: false },
+  { id: 'tent-4', name: 'Палатка у костра', name_en: 'Bonfire Tent', desc: 'Рядом с общей зоной костра и общения.', desc_en: 'Next to the common bonfire and communication area.', capacity: 4, price: 1800, x: 30, y: 60, initiallyOccupied: false },
+  { id: 'tent-5', name: 'Мыс влюблённых', name_en: 'Lovers Cape', desc: 'Уединённое место на мысу с отличным видом.', desc_en: 'Secluded place on the cape with a great view.', capacity: 2, price: 2500, x: 70, y: 55, initiallyOccupied: false },
+  { id: 'tent-6', name: 'Хижина рыбака', name_en: 'Fisherman Hut', desc: 'Деревянный навес, место для лодки и снастей.', desc_en: 'Wooden canopy, space for a boat and gear.', capacity: 3, price: 2200, x: 15, y: 80, initiallyOccupied: false },
+  { id: 'tent-7', name: 'Медвежий угол', name_en: 'Bear Corner', desc: 'Для тех, кто не боится леса и любит приключения.', desc_en: 'For those who are not afraid of the forest and love adventure.', capacity: 5, price: 2800, x: 45, y: 75, initiallyOccupied: true },
+  { id: 'tent-8', name: 'Сосновый бор', name_en: 'Pine Forest', desc: 'Аромат хвои, мягкий мох и абсолютная тишина.', desc_en: 'The aroma of pine needles, soft moss and absolute silence.', capacity: 4, price: 2000, x: 85, y: 85, initiallyOccupied: false }
+];
